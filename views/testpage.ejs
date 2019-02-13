@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Simon</title>
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+  <h1>just a test page</h1>
+  <% for (let i=0;i<foundPlayers.length;i++){ %>
+  <ul>
+    <li>
+      <%=i+1%>
+    </li>
+    <li>
+      <%= foundPlayers[i].playerName %>
+    </li>
+    <li>
+      <%= foundPlayers[i].playerScore %>
+    </li>
+  </ul>
+  <% }%>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/game.js" charset="utf-8"></script>
+</body>
+
+</html>

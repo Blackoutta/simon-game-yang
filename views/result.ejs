@@ -1,0 +1,13 @@
+<%-include('partials/header')-%>
+<div class="container">
+  <h1 id="score-title">Your score is: <%=playerScore%></h1>
+  <a href="/"><button class="btn btn-md btn-outline-light" type="button" name="button">Try Again</button></a>
+
+  <form action="/leaderboard" method="post">
+    <input type="text" name="playerName" placeholder="Type your name here">
+    <button class="btn btn-md btn-primary" type="submimt" name="submit">Submit to Leaderboard</button>
+  </form>
+</div>
+
+
+<%-include('partials/footer')-%>

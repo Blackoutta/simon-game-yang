@@ -1,0 +1,48 @@
+<%- include("partials/header") -%>
+
+<h1>Your Rank</h1>
+  <table class="table table-light">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Player Name</th>
+        <th scope="col">Player Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><%= playerRank %></th>
+        <td><%= playerName %></td>
+        <td><%= playerScore %></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1>Top 10 Players</h1>
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Player Name</th>
+        <th scope="col">Player Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (let i=0;i<foundPlayers.length;i++){ %>
+      <tr>
+        <th scope="row">
+          <%=i+1%>
+        </th>
+        <td>
+          <%= foundPlayers[i].playerName %>
+        </td>
+        <td>
+          <%= foundPlayers[i].playerScore %>
+        </td>
+      </tr>
+      <% }%>
+    </tbody>
+  </table>
+  <a href="/"><button class="btn btn-md btn-outline-light" type="button" name="button">Play Again!</button></a>
+
+<%- include("partials/footer") -%>
