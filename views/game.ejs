@@ -1,0 +1,29 @@
+<%-include('partials/header')-%>
+<form class="submitScore" action="/result" method="post">
+  <input class="playerScore" type="hidden" name="score">
+</form>
+<h1 id="level-title">Press Any Key to Start</h1>
+<div class="container">
+
+  <div class="game-container">
+    <div class="row justify-content-center">
+      <div id="green" class="game-btn green">
+      </div>
+      <div id="red" class="game-btn red">
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div id="yellow" class="game-btn yellow">
+      </div>
+      <div id="blue" class="game-btn blue">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<a href="/">
+  <button id="home-btn-fixed" class="btn btn-lg btn-outline-dark home-btn" type="button" name="button">Home</button>
+</a>
+<script type="text/javascript" src="/js/game.js"></script>
+<%-include('partials/footer')-%>

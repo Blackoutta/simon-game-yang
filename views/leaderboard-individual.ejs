@@ -5,35 +5,17 @@
 
 <div class="container leaderboard-container">
   <div class="row">
-    <div class="col-md-6 leaderboard-left">
-      <h4>Your Rank</h4>
-      <table class="table table-light">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Player Name</th>
-            <th scope="col">Player Score</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row" class="current-player-rank">
-              <%= playerRank %>
-            </th>
-            <td>
-              <%= playerName %>
-            </td>
-            <td>
-              <%= playerScore %>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <a href="/game"><button class="btn btn-lg btn-danger play-btn play-btn-leaderboard" type="button" name="button">Play Again!</button></a>
+
+    <div class="col-md-6 menu">
+      <a href="/game">
+        <button class="btn btn-lg btn-danger play-btn" type="button" name="button">Play</button>
+      </a>
+      <a href="/">
+        <button class="btn btn-lg btn-outline-dark home-btn" type="button" name="button">Home</button>
+      </a>
     </div>
 
-    <div class="col-md-6 leaderboard-right">
-      <h4>Top 10 Players</h4>
+    <div class="leaderboard-right col-md-6">
       <table class="table table-dark">
         <thead>
           <tr>
@@ -59,8 +41,6 @@
         </tbody>
       </table>
     </div>
-
-
   </div>
 </div>
 

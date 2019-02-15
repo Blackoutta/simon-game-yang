@@ -31,9 +31,14 @@ const Player = mongoose.model('Player', playerSchema);
 
 //routes
 app.get("/", function(req, res) {
-  playerScore = 0;
   res.render('index');
 });
+
+app.get("/game", function(req, res) {
+  playerScore = 0;
+  res.render('game');
+});
+
 
 
 app.post("/result", function(req, res) {
@@ -45,7 +50,15 @@ app.post("/result", function(req, res) {
 });
 
 
-
+app.get("/leaderboard-individual", function(req,res){
+  Player.find({}).sort({"playerScore": "desc"}).limit(10).exec(function(err, docs){
+    if (docs) {
+      res.render("leaderboard-individual", {
+        foundPlayers: docs,
+      });
+    }
+  });
+});
 
 app.get("/leaderboard/:playerId", function(req, res) {
   console.log("received get request on /leaderboard/playerId");
@@ -75,10 +88,6 @@ app.get("/leaderboard/:playerId", function(req, res) {
       });
     });
   });
-
-
-
-
 });
 
 app.post("/leaderboard", function(req, res) {

@@ -1,14 +1,11 @@
 body {
   text-align: center;
-  background-color: #011F3F;
+  background-color: #fefaec;
+  font-family: 'Quicksand', sans-serif;
 }
 
-#level-title {
+h1, h2, h3, h4 {
   font-family: 'Press Start 2P', cursive;
-  font-size: 2rem;
-  margin:  5%;
-  color: #FEF2BF;
-
 }
 
 #score-title {
@@ -19,37 +16,166 @@ body {
   display: block;
   width: 50%;
   margin: auto;
+}
 
+/* Home Page */
+
+#main-title {
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.hp-container {
+  width: 60%;
+}
+
+.home-page-menu {
+  text-align: left;
+}
+
+.play-btn, .leaderboard-btn {
+  margin-top: 1.5rem;
+}
+
+.hp-container {
+  margin-top: 10%;
+}
+
+.hp-btn-wrapper {
+  margin-top: 10%;
+}
+
+.play-btn {
+  background-color: #f38181;
+  border:none;
+  box-shadow: 0px 2px #887b9a;
+  width: 80%;
+  height: 60px;
+}
+
+.play-btn:hover {
+  background-color: #d95c5c;
+  border: none;
+  box-shadow: 2px 3px #625772;
+}
+
+.play-btn:active {
+  transform: translateY(4px);
+  background-color: #d95c5c;
+}
+
+.leaderboard-btn {
+  height: 45px;
+}
+
+.leaderboard-btn:active {
+  height: 45px;
+  transform: translateY(4px);
+}
+
+.tutorial-title {
+  margin-top:.5rem;
+  text-align: center;
+  line-height: 2;
+}
+
+.img-placeholder {
+  background-color: #625772;
+  margin: auto;
+  width: 100%;
+  margin-top: 15%;
+}
+
+.how-to-play {
+  text-align: left;
+}
+
+
+.red-span {
+  color: #f38181;
+}
+
+.green-span {
+  color: #6effbf;
+}
+
+.yellow-span {
+  color: #faf096;
+}
+
+.blue-span {
+  color: #408ab4;
+}
+
+.purple-span {
+  color: #926ec3;
+}
+
+
+/* Game Page */
+#home-btn-fixed {
+  position: fixed;
+  right: 20px;
+  bottom:0;
+  width: 10%;
+}
+
+#level-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+  margin: 2% auto 7%;
+  color: #4d4c4e;
+}
+
+.game-container {
+  transform: rotate(45deg);
+  width: 70%;
+  margin: auto;
 }
 
 .game-btn {
-  margin: 25px;
+  margin: 15px;
   display: inline-block;
-  height: 150px;
-  width: 150px;
+  height: 130px;
+  width: 130px;
   border-radius: 20%;
-  border: 5px solid black;
+  border: 5px solid #584c69;
+  cursor: pointer;
+  box-shadow: 3px 3px #30293c;
+}
+
+.game-btn:hover {
+  border: 5px solid #926ec3;
+}
+
+.game-btn:active {
+  transform: translate(4px);
+  border: 5px solid #926ec3;
+  box-shadow: none;
 }
 
 .game-over {
-  background-color: red;
+  background-color: #f38181;
   opacity: 0.8;
 }
 
 .red {
-  background-color: red;
+  background-color: #f38181;
 }
 
 .green {
-  background-color: green;
+  background-color: #6effbf;
 }
 
 .blue {
-  background-color: blue;
+  background-color: #408ab4;
+
 }
 
 .yellow {
-  background-color: yellow;
+  background-color: #faf096;
+
 }
 
 .pressed {
@@ -57,6 +183,104 @@ body {
   background-color: white;
 }
 
-#leaderboard-title {
+/* Result Page */
+#home-btn-result {
+  margin-bottom: 0;
+}
+
+#score-title {
+  color: #4d4c4e;
+}
+
+.display-score {
+  color: #3c3c39;
+  font-size: 4rem;
+}
+
+.result-container {
+  margin: 1% auto 3%;
+}
+
+.submit-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.or {
+  margin: 1rem 0;
+  color: #625772;
+}
+
+.submit-btn {
+  width: 30%;
+  margin-top: 1rem;
+  background-color: #a9eee6;
+  border:none;
+  border: 1px solid #625772;
+}
+
+.submit-btn:hover {
+  background-color: #625772;
+  border: 1px solid #625772;
   color: white;
+}
+
+input[name="playerName"] {
+  width: 60%;
+}
+
+
+/* Leaderboard Page  */
+
+#leaderboard-title {
+  margin-top: 2%;
+}
+
+.current-player-rank {
+  color: #f38181;
+}
+
+
+.leaderboard-container {
+  width: 80%;
+  margin: 3% auto;
+}
+
+.table-dark {
+  background-color: #625772;
+  font-size: .8rem;
+}
+
+.leaderboard-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.table-light {
+  border: 2px dashed #f38181;
+  background-color: #a9eee6;
+}
+
+.table {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.play-btn-leaderboard {
+  width: 50%;
+}
+
+/* Leaderboard Individual */
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-btn {
+  display: inline-block;
+  margin: 2rem auto;
+  width: 80%;
 }

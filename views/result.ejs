@@ -1,13 +1,23 @@
 <%-include('partials/header')-%>
-<div class="container">
-  <h1 id="score-title">Your score is: <%=playerScore%></h1>
-  <a href="/"><button class="btn btn-md btn-outline-light" type="button" name="button">Try Again</button></a>
+<div class="container result-container">
 
-  <form action="/leaderboard" method="post">
-    <input type="text" name="playerName" placeholder="Type your name here">
-    <button class="btn btn-md btn-primary" type="submimt" name="submit">Submit to Leaderboard</button>
-  </form>
+  <h1 id="score-title">Your Score</h1>
+  <h1 class="display-score">
+    <%=playerScore%>
+  </h1>
+
+  <div class="option-wrapper">
+    <a href="/game">
+      <button class="btn btn-lg btn-danger play-btn" type="button" name="button">Try Again</button>
+    </a>
+    <a href="/">
+      <button id="home-btn-result" class="btn btn-lg btn-outline-dark home-btn" type="button" name="button">Home</button>
+    </a>
+    <h2 class="or">Or</h2>
+    <form class="submit-name" action="/leaderboard" method="post">
+      <input class="form-control" type="text" name="playerName" placeholder="Type your name here" required>
+      <button class="btn btn-md btn-primary submit-btn" type="submit" name="submit">Submit to Leaderboard</button>
+    </form>
+  </div>
 </div>
-
-
 <%-include('partials/footer')-%>
