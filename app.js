@@ -67,26 +67,37 @@ app.get("/leaderboard/:playerId", function(req, res) {
   let player;
 
   Player.findOne({_id: playerId}, function(err, foundPlayer){
-    player = foundPlayer;
+    if (!foundPlayer) {
+      res.redirect("/");
+    } else {
+      player = foundPlayer;
 
-    Player.find({}).sort({
-      playerScore: "desc",
-    }).exec(function(err, foundPlayers) {
-      if (foundPlayers) {
-        playerRank = foundPlayers.findIndex(x => x._id.toString() === playerId.toString()) + 1;
-      }
-
-      Player.find({}).sort({"playerScore": "desc"}).limit(10).exec(function(err, docs){
-        if (docs) {
-          res.render("leaderboard", {
-            foundPlayers: docs,
-            playerRank: playerRank,
-            playerName: player.playerName,
-            playerScore: player.playerScore
-          });
+      Player.find({}).sort({
+        playerScore: "desc",
+      }).exec(function(err, foundPlayers) {
+        if (foundPlayers) {
+          playerRank = foundPlayers.findIndex(x => x._id.toString() === playerId.toString()) + 1;
         }
+
+        Player.find({}).sort({"playerScore": "desc"}).limit(10).exec(function(err, docs){
+          if (!err) {
+            if (docs) {
+              res.render("leaderboard", {
+                foundPlayers: docs,
+                playerRank: playerRank,
+                playerName: player.playerName,
+                playerScore: player.playerScore
+              });
+          } else {
+            res.redirect("/");
+          }
+        } else {
+          res.redirect("/");
+        }
+        });
       });
-    });
+    }
+
   });
 });
 

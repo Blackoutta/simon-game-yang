@@ -233,6 +233,11 @@ input[name="playerName"] {
 
 /* Leaderboard Page  */
 
+#home-btn-leaderboard {
+  width: 30%;
+  margin: 4% auto;
+}
+
 #leaderboard-title {
   margin-top: 2%;
 }
