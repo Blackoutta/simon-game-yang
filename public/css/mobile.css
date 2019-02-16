@@ -1,4 +1,5 @@
 @media (max-width: 768px) {
+
   /* Home Page */
   #main-title {
     font-size: 4rem;
@@ -46,7 +47,7 @@
     border: 5px solid #584c69;
   }
 
-/* Result Page */
+  /* Result Page */
   .result-container {
     margin-top: 15%;
   }
@@ -59,21 +60,79 @@
     margin: 15% auto;
   }
 
-/* Leaderboard Page */
-#leaderboard-title {
-  margin-top: 10%;
+  /* Leaderboard Page */
+  #leaderboard-title {
+    margin-top: 10%;
+  }
+
+  .leaderboard-container {
+    margin-top: 10%;
+  }
+
+  .leaderboard-right {
+    margin-top: 10%;
+  }
+
+  #top-10-table {
+    margin-top: 7%;
+  }
 }
 
-.leaderboard-container {
-  margin-top: 10%;
-}
+@media (max-width: 576px) {
+  /* Home Page */
+  #main-title {
+    font-size: 2.5rem;
+  }
 
-.leaderboard-right {
-  margin-top: 10%;
-}
+  .sub-title {
+    font-size: 1rem;
+  }
 
-#top-10-table {
-  margin-top: 7%;
-}
+  .tutorial-title {
+    font-size: 1rem;
+  }
+
+
+  /* Game Page */
+  .game-container {
+    height: 500px;
+  }
+
+  .game-btn {
+    width: 90px;
+    height: 90px;
+  }
+
+  #level-title {
+    font-size: 1.4rem;
+  }
+
+  #home-btn-fixed {
+    text-align: center;
+    width: 30%;
+  }
+
+  /* Result Page */
+  #score-title {
+    font-size: 2rem;
+  }
+
+  .result-container {
+    width: 90%;
+  }
+
+  .or {
+    margin: 10% auto;
+  }
+
+  /* Leaderboard Page */
+  #leaderboard-title {
+    font-size: 1.7rem;
+  }
+
+  #home-btn-leaderboard {
+    width: 40%;
+    text-align: center;
+  }
 
 }
