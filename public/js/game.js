@@ -80,7 +80,7 @@ function enableButtonClick() {
 }
 
 
-$(document).on('keydown', function(e) {
+$(document).on('click', function(e) {
   if (started === false) {
     enableButtonClick();
     nextSequence();

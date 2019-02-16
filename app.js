@@ -15,7 +15,10 @@ app.use(express.static('public'));
 app.set("view engine", "ejs");
 
 // mongodb setup
-mongoose.connect("mongodb://admin-yang:test123@cluster0-shard-00-00-nt9yo.mongodb.net:27017,cluster0-shard-00-01-nt9yo.mongodb.net:27017,cluster0-shard-00-02-nt9yo.mongodb.net:27017/simonDB?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true", {
+// mongoose.connect("mongodb://admin-yang:test123@cluster0-shard-00-00-nt9yo.mongodb.net:27017,cluster0-shard-00-01-nt9yo.mongodb.net:27017,cluster0-shard-00-02-nt9yo.mongodb.net:27017/simonDB?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true", {
+//   useNewUrlParser: true
+// });
+mongoose.connect("mongodb://localhost:27017/simonDB", {
   useNewUrlParser: true
 });
 
@@ -104,7 +107,7 @@ app.get("/leaderboard/:playerId", function(req, res) {
 app.post("/leaderboard", function(req, res) {
   console.log("received POST request on /leaderboard");
   const newRecord = new Player({
-    playerName: req.body.playerName,
+    playerName: req.body.playerName.substring(0, 25),
     playerScore: playerScore
   });
   newRecord.save();

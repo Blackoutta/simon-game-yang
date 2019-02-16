@@ -1,0 +1,79 @@
+@media (max-width: 768px) {
+  /* Home Page */
+  #main-title {
+    font-size: 4rem;
+  }
+
+  .sub-title {
+    font-size: 2rem;
+    margin-top: 10%;
+  }
+
+  .home-page-menu {
+    text-align: center;
+  }
+
+  .how-to-play {
+    margin-top: 15%;
+  }
+
+  .img-placeholder {
+    margin-top: 3%;
+  }
+
+  /* Game Page */
+  .game-container {
+    transform: none;
+  }
+
+  #level-title {
+    margin-top: 7%;
+  }
+
+  #home-btn-fixed {
+    width: 20%;
+  }
+
+  .game-btn:active {
+    border: 5px solid #584c69;
+  }
+
+  .game-btn:visited {
+    border: 5px solid #584c69;
+  }
+
+  .game-btn:hover {
+    border: 5px solid #584c69;
+  }
+
+/* Result Page */
+  .result-container {
+    margin-top: 15%;
+  }
+
+  .submit-btn {
+    width: 50%;
+  }
+
+  .or {
+    margin: 15% auto;
+  }
+
+/* Leaderboard Page */
+#leaderboard-title {
+  margin-top: 10%;
+}
+
+.leaderboard-container {
+  margin-top: 10%;
+}
+
+.leaderboard-right {
+  margin-top: 10%;
+}
+
+#top-10-table {
+  margin-top: 7%;
+}
+
+}
