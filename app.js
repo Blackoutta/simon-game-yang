@@ -15,7 +15,7 @@ app.use(express.static('public'));
 app.set("view engine", "ejs");
 
 // mongodb setup
-mongoose.connect("mongodb://localhost:27017/simonDB", {
+mongoose.connect("mongodb://admin-yang:test123@cluster0-shard-00-00-nt9yo.mongodb.net:27017,cluster0-shard-00-01-nt9yo.mongodb.net:27017,cluster0-shard-00-02-nt9yo.mongodb.net:27017/simonDB?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true", {
   useNewUrlParser: true
 });
 
@@ -116,8 +116,12 @@ app.post("/leaderboard", function(req, res) {
 
 
 
+// App Listening
 
-
-app.listen(3000, function() {
-  console.log("Server is listening on port 3000!");
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+app.listen(port, function(){
+  console.log("Server is listening on port 3000 locally!");
 });
